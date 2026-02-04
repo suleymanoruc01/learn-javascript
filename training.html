@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Alıştırmaları</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      section {
+        margin-bottom: 30px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      h2 {
+        color: #333;
+      }
+      button {
+        margin-top: 10px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. Çift Sayılar -->
+    <section>
+      <h2>1–100 Arası Çift Sayılar</h2>
+      <button onclick="yazdirCiftSayilar()">Çift Sayıları Yazdır</button>
+      <pre id="ciftSonuc"></pre>
+    </section>
+
+    <!-- 2. Asal Sayı Kontrolü -->
+    <section>
+      <h2>Asal Sayı Kontrolü</h2>
+      <input type="number" id="asalInput" placeholder="Sayı girin" />
+      <button onclick="asalKontrol()">Asal mı?</button>
+      <p id="asalSonuc"></p>
+    </section>
+
+    <!-- 3. Not Kontrolü -->
+    <section>
+      <h2>Not Kontrolü (Geçti/Kaldı)</h2>
+      <input type="number" id="notInput" placeholder="Not girin" />
+      <button onclick="notKontrol()">Durum</button>
+      <p id="notSonuc"></p>
+    </section>
+     <!-- 4. Ad ve Yaş Al -->
+    <section>
+        <h2>Ad ve Yaş Gir – Mesaj Ver</h2>
+        <input type="text" id="adInput" placeholder="Adınız">
+        <input type="number" id="yasInput" placeholder="Yaşınız">
+        <button onclick="mesajGonder()">Mesajı Göster</button>
+        <p id="mesajSonuc"></p>
+    </section>
+
+    <!-- 5. Arrow Function ile Kare -->
+    <section>
+        <h2>Arrow Function ile Kare Hesapla</h2>
+        <input type="number" id="kareInput" placeholder="Sayı girin">
+        <button onclick="kareHesapla()">Karesini Göster</button>
+        <p id="kareSonuc"></p>
+    </section>
+
+    <!-- 6. Dizideki En Büyük Sayı -->
+    <section>
+        <h2>Dizideki En Büyük Sayıyı Bul</h2>
+        <input type="text" id="diziInput" placeholder="Örn: 3,5,1,9,4">
+        <button onclick="enBuyukBul()">En Büyük</button>
+        <p id="diziSonuc"></p>
+    </section>
+
+    <!-- 7. Öğrenci Dizisini Alfabetik Sırala -->
+    <section>
+    <h2>Öğrencileri Alfabetik Sırala</h2>
+    <button onclick="siralaOgrenciler()">Sırala</button>
+    <br><br>
+    <input type="text" id="ogrenciInput" placeholder="Öğrenci Adı">
+    <button onclick="ekleOgrenciler()">Öğrenci ekle</button>
+    <p id="ogrenciSonuc"></p>
+    </section>
+
+    <!-- 8. Filter ve Reduce: 50+ Notlar ve Toplam -->
+    <section>
+    <h2>50+ Notları Filtrele ve Toplamını Hesapla</h2>
+    <button onclick="notlariFiltreleVeTopla()">İşle</button>
+    <p id="notToplam"></p>
+    </section>
+
+    <!-- 9. Map ile Kitap İsimlerini Listele -->
+    <section>
+    <h2>Kitap Listesi (Map ile)</h2>
+    <button onclick="kitapIsimleri()">Kitapları Göster</button>
+    <p id="kitapSonuc"></p>
+    </section>
+
+    <!-- 10. Soru -->
+    <section>
+    <h2>Palindrome kontrolü</h2>
+    <input type="text" id="palindromeInput">
+    <!-- Örnek giriş: kajak, ada, 12321 -->
+    <button onclick="palindromeKontrol()">Kontrol Et</button>
+    <p id="palindrome"></p>
+    </section>
+    
+
+    <!-- 11. Soru -->
+    <section>
+    <h2>Sayı ters çevirme</h2>
+    <input type="number" id="reverseInput">
+    <!-- Örnek giriş: 1234 → 4321 -->
+    <button onclick="sayiTersCevir()">Ters Çevir</button>
+    <p id="tersayi"></p>
+    </section>
+    
+
+    <!-- 12. Soru -->
+    <section>
+    <h2>En büyük üç sayıyı bulma</h2>
+    <input type="text" id="buyukUcInput" placeholder="10,5,8,12,3 gibi">
+    <!-- Örnek giriş: 5,18,3,99,8,45 -->
+    <button onclick="enBuyukUc()">Bul</button>
+    <p id="ucbuyuksayi"></p>
+    </section>
+    
+
+    <!-- 13. Soru -->
+    <section>
+    <h2>Dizi içindeki tekrar edenleri temizleme</h2>
+    <input type="text" id="tekrarInput" placeholder="1,2,2,3,3,4 gibi">
+    <!-- Örnek giriş: 1,2,2,3,4,4,5,1 -->
+    <button onclick="tekrarTemizle()">Temizle</button>
+    <p id="tekrartemizle"></p>
+    </section>
+    
+      <script src="printEvenNumbers.js"></script>
+      <script src="primeNumber.js"></script>
+      <script src="gradeControl.js"></script>
+      <script src="getMessage.js"></script>
+      <script src="squareCalculation.js"></script>
+      <script src="maxNumberofArray.js"></script> 
+      <script src="addStudents.js"></script>
+      <script src="sortStudents.js"></script>
+      <script src="filterAndSum.js"></script>
+      <script src="nameOfBooks.js"></script>
+      <script src="checkPalindroma.js"></script>
+      <script src="reverseNumber.js"></script>
+      <script src="largestTreeNumbers.js"></script>
+      <script src="cleanRepeatNumbers.js"></script>
+
+
+  </body>
+</html>
